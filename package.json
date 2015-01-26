@@ -9,7 +9,7 @@
     "Keegan Poppen <keegan.poppen@gmail.com>"
   ],
   "main": "index.js",
-  "dependencies": {
+  "devDependencies": {
     "async": "~0.9.0",
     "browserify": "~6.3.2",
     "coffee-script": "~1.8.0",
@@ -69,10 +69,8 @@
     "url": "https://github.com/quilljs/quill/issues"
   },
   "scripts": {
-    "install": "./node_modules/.bin/grunt dist",
-    "prepublish": "./node_modules/.bin/grunt dist",
-    "postpublish": "./node_modules/.bin/grunt clean:all",
-    "test": "./node_modules/.bin/grunt test"
+    "postpublish": "grunt clean:all",
+    "test": "grunt test"
   },
   "keywords": [
     "editor",
