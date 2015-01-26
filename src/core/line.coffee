@@ -3,7 +3,7 @@ Delta      = require('rich-text/lib/delta')
 dom        = require('../lib/dom')
 Format     = require('./format')
 Leaf       = require('./leaf')
-Line       = require('./line')
+# Line       = require('./line')
 LinkedList = require('../lib/linked-list')
 Normalizer = require('../lib/normalizer')
 

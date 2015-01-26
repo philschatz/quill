@@ -6,8 +6,9 @@ dom           = require('./lib/dom')
 Editor        = require('./core/editor')
 Format        = require('./core/format')
 Range         = require('./lib/range')
-Normalizer    = require('./lib.normalizer')
-
+Normalizer    = require('./lib/normalizer')
+Line          = require('./core/line')
+Leaf          = require('./core/leaf')
 
 class Quill extends EventEmitter2
   @version: pkg.version
@@ -46,10 +47,13 @@ class Quill extends EventEmitter2
 
   @require: (name) ->
     switch name
-      when 'lodash' then return _
-      when 'delta' then return Delta
-      when 'dom' then return dom
-      when 'normalizer' then return Normalizer
+      when 'lodash'       then return _
+      when 'delta'        then return Delta
+      when 'dom'          then return dom
+      when 'normalizer'   then return Normalizer
+      when 'core/line'    then return Line
+      when 'core/leaf'    then return Leaf
+      when 'core/format'  then return Format
       else return null
 
 
